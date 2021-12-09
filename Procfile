@@ -1,0 +1,1 @@
+web: java -jar -Dspring.profiles.active=heroku target/classes/distanceapi-0.0.1-SNAPSHOT.jar
