@@ -1,8 +1,9 @@
-package com.diolabs.distanceapi.countries.model;
+package com.diolabs.distanceapi.countries.service;
 
 import javax.validation.Valid;
 
 import com.diolabs.distanceapi.countries.exception.CountryNotFoundException;
+import com.diolabs.distanceapi.countries.model.Country;
 import com.diolabs.distanceapi.countries.repository.CountryRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;

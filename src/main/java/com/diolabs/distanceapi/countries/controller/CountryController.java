@@ -3,7 +3,7 @@ package com.diolabs.distanceapi.countries.controller;
 import javax.validation.Valid;
 
 import com.diolabs.distanceapi.countries.model.Country;
-import com.diolabs.distanceapi.countries.model.CountryService;
+import com.diolabs.distanceapi.countries.service.CountryService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/countries/api/v1")
+@RequestMapping("/countries")
 public class CountryController {
     
     @Autowired
@@ -28,7 +28,7 @@ public class CountryController {
         return countryService.findAll(page);
     }
 
-    @GetMapping("/countries/id")
+    @GetMapping("/{id}")
     @ResponseStatus(code = HttpStatus.OK)
     public Country findById(@Valid @PathVariable Long id){
         return countryService.findById(id);
